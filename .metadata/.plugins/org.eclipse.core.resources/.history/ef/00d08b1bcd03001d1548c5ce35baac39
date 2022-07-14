@@ -1,0 +1,47 @@
+
+public class Part2 {
+
+	public static void main(String[] args) {
+		// create a variables with the following values
+		// then using a switch, set the value of the loyaltyMemberDiscount as follows:
+		// SILVER is 0.10, GOLD is 0.15 and PLATINUM is 0.25
+				
+		String loyaltyMemberStatus = "GOLD";
+		double loyaltyMemberDiscount = 0.0;
+		
+		switch (loyaltyMemberStatus) {
+		case "SILVER":
+			loyaltyMemberDiscount = 0.10;
+			break;
+		case "GOLD":
+			loyaltyMemberDiscount = 0.15;
+			break;
+		case "PLATINUM":
+			loyaltyMemberDiscount = 0.25;
+			break;
+		}
+		System.out.println("Your membership status is : " + loyaltyMemberStatus);
+		System.out.println("Your discount is :" + loyaltyMemberDiscount);
+
+		// create a variable called billTotal and assign a value
+				// create a variable called adjustedTotal and assign it 
+						
+		double billTotal = 800.00;
+		double adjTotal =  billTotal - (loyaltyMemberDiscount * billTotal);
+		
+			if (adjTotal > 500.00) {
+				if (loyaltyMemberStatus == "SILVER") {
+						loyaltyMemberStatus = "GOLD";		
+				} else if (loyaltyMemberStatus == "GOLD"){
+						loyaltyMemberStatus = "PLATINUM";
+				}
+			System.out.println("Your adjusted total is :" + adjTotal);		
+			System.out.println("You have been upgraded to the : " + loyaltyMemberStatus);	
+			} 
+				
+				
+				
+				
+	}
+
+}
